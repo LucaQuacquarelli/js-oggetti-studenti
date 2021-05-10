@@ -48,10 +48,22 @@ for (var i = 0; i < studentList.length; i++) {
  
 }
 // Dare la possibilità all'utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell'ordine: nome, cognome e età.
+do {
+    var yourName = prompt("Inserisci il tuo Nome");
+} while (!isNaN(yourName));
+
+do {
+    var yourSurname = prompt("Inserisci il tuo Cognome");
+} while (!isNaN(yourSurname));
+
+do {
+    var yourAge = parseInt(prompt("Inserisci la tua età"));
+} while (isNaN(yourAge));
+
 var newStudent = {
-    name: yourName = prompt("Inserisci il tuo Nome"),
-    surname: yourSurname = prompt("Inserisci il tuo Cognome"),
-    age: yourAge = parseInt(prompt("Inserisci la tua età"))
+    name: yourName,
+    surname: yourSurname,
+    age: yourAge
 }
 studentList.push(newStudent);
 console.log(studentList);
